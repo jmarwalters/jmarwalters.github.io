@@ -2,12 +2,20 @@
   "_help": "Edit this file to update the site. Values marked PLACEHOLDER are not real. Replace them, then commit and push to main.",
   "profile": {
     "name": "Jared Walters",
-    "tagline": "Reliable and hardworking student committed to forstering pivotal experiences in supply chain management to fully observe and understand how supply chain decisions affects business processes and operations.",
+    "tagline": "Reliable and hardworking student committed to fostering pivotal experiences in supply chain management to fully observe and understand how supply chain decisions affect business performance.",
     "intro": [
-      "Hi, I'm Jared Walters. I am a senior supply chain management major at Rutgers Business School. My career interests and experience for supply chain management include logsitics, demand planning, risk management, and resrouce planning. Ultimately, I would like to garner more supply chain experience in the pharmaceutical supply chain so that I may contribute to substantial changes to the development and devlivery of products that will change lives daily.",
-      "My interests focus on supply chain management, operations, finance, and data analytics. I enjoy leveraging data visualization and analytical tools to turn information into clear, actionable deliverables. "
+      "Hi, I'm Jared Walters. I am a senior supply chain management major at Rutgers Business School. My career interests and experience in supply chain management include logistics, demand planning, procurement, inventory management, and analytics.",
+      "My interests focus on supply chain management, operations, finance, and data analytics. I enjoy leveraging data visualization and analytical tools to turn information into clear, actionable insights."
     ],
     "interests": ["Supply Chain Management", "Operations", "Data Analytics"],
+    "skills": [
+      "[PLACEHOLDER: Excel]",
+      "[PLACEHOLDER: SQL]",
+      "[PLACEHOLDER: Power BI]",
+      "[PLACEHOLDER: Tableau]",
+      "[PLACEHOLDER: Inventory Management]",
+      "[PLACEHOLDER: ERP Systems]"
+    ],
     "photo": "JW - Headshot.png",
     "photoAlt": "Portrait of Jared Walters",
     "university": "[Rutgers University-New Brunswick]",
@@ -27,7 +35,7 @@
       "placeholder": true,
       "title": "Sample Project Title",
       "description": "PLACEHOLDER: This is sample content showing how a project card looks. It is not a real project. Replace it with your own work.",
-      "category": "Analytics",
+      "category": "Data Analytics",
       "tools": ["Tool 1", "Tool 2"],
       "status": "Placeholder",
       "image": "",
@@ -39,7 +47,7 @@
       "placeholder": true,
       "title": "Sample Supply Chain Project",
       "description": "PLACEHOLDER: Sample card for a supply chain project. Not a real project and no results are implied.",
-      "category": "Supply Chain",
+      "category": "Supply Chain Management",
       "tools": ["Tool 1"],
       "status": "Placeholder",
       "image": "",
