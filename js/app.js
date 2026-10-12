@@ -119,7 +119,6 @@
     if (mail) li.appendChild(el('a', { text: mail, attrs: { href: 'mailto:' + mail } }));
     else li.appendChild(el('span', { cls: 'placeholder', text: 'Email: [PLACEHOLDER - add in portfolio.json]' }));
     ul.appendChild(li);
-    linkItem(ul, 'LinkedIn', safeUrl(p.linkedin));
     linkItem(ul, 'GitHub', safeUrl(p.github));
   }
 
