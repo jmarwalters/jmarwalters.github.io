@@ -21,6 +21,20 @@ nav{flex:1}
 .btn-outline:hover{background:var(--gray);color:var(--burgundy-dark)}
 .btn-small{padding:6px 12px;font-size:.9rem}
 .btn-disabled{display:inline-block;padding:10px 20px;border:2px dashed var(--line);border-radius:6px;color:var(--muted);background:var(--gray)}
+
+.resume-frame {
+  width: 100%;
+  min-height: 900px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.resume-note {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
 .panel{padding:64px 0}
 .panel[hidden]{display:none}
 .about-grid{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start}
