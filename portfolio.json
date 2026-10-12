@@ -9,11 +9,11 @@
     ],
     "interests": ["Supply Chain Management", "Operations", "Data Analytics"],
     "skills": [
-      "[PLACEHOLDER: Excel Proficiency]",
-      "[PLACEHOLDER: SQL Proficiency]",
-      "[PLACEHOLDER: Power BI]",
-      "[PLACEHOLDER: Data Analysis]",
-      "[PLACEHOLDER: ERP Systems]"
+      "Excel Proficiency",
+      "SQL Proficiency",
+      "Data Visualization (Power BI)",
+      "Data Analysis",
+      "ERP Systems"
     ],
     "photo": "JW - Headshot.png",
     "photoAlt": "Portrait of Jared Walters",
