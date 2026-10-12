@@ -38,6 +38,10 @@ h2{font-size:2rem;margin:0 0 24px}
 .tagline{font-size:1.3rem;color:var(--muted)}
 .chips{list-style:none;padding:0;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 .chips li{border:1px solid var(--burgundy);color:var(--burgundy);border-radius:999px;padding:4px 14px;font-size:.9rem}
+.skills-card{margin-top:30px;padding:22px 20px;border:1px solid var(--line);border-radius:12px;background:var(--gray)}
+.skills-card h3{margin:0 0 16px}
+.skills-list{list-style:none;padding:0;margin:0;display:flex;gap:10px;flex-wrap:wrap}
+.skills-list li{background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px;color:var(--text);font-size:.9rem}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
 .filters button{font:inherit;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--text)}
 .filters button[aria-pressed=true]{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
