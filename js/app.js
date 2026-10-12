@@ -133,6 +133,23 @@
     var nav = $('nav-resume'); clear(nav); nav.appendChild(resumeControl('btn-small'));
     $('resume-summary').textContent = str(data.resume && data.resume.summary);
     var a = $('resume-action'); clear(a); a.appendChild(resumeControl());
+
+    var preview = $('resume-preview');
+    clear(preview);
+    var path = safePath(data.resume && data.resume.file);
+    if (resumeAvailable && path) {
+      preview.appendChild(el('iframe', {
+        cls: 'resume-frame',
+        attrs: {
+          src: path,
+          title: 'Resume preview',
+          loading: 'lazy'
+        }
+      }));
+      preview.appendChild(el('p', { cls: 'resume-note', text: 'If the preview does not load, use the download button above.' }));
+    } else {
+      preview.appendChild(el('div', { cls: 'empty', text: 'Resume coming soon' }));
+    }
   }
   function checkResume() {
     var path = safePath(data.resume && data.resume.file);
