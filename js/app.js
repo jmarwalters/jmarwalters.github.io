@@ -19,7 +19,6 @@
   function str(v) { return typeof v === 'string' ? v.trim() : ''; }
   function isPlaceholder(v) { return /PLACEHOLDER/i.test(v); }
 
-  // Allow only https:// external URLs (and mailto for email handled separately).
   function safeUrl(v) {
     v = str(v);
     if (!v) return '';
@@ -28,7 +27,6 @@
       return u.protocol === 'https:' ? u.href : '';
     } catch (e) { return ''; }
   }
-  // Local file path: relative only, no scheme, no leading slash, no parent traversal.
   function safePath(v) {
     v = str(v);
     if (!v || /^[a-z][a-z0-9+.-]*:/i.test(v) || v.charAt(0) === '/' || v.indexOf('//') === 0 || /(^|\/)\.\.(\/|$)/.test(v) || v.indexOf('\\') !== -1) return '';
@@ -36,7 +34,7 @@
   }
   function safeEmail(v) {
     v = str(v);
-    return /^[^\s@<>\"']+@[^\s@<>\"']+\.[^\s@<>\"']+$/.test(v) ? v : '';
+    return /^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/.test(v) ? v : '';
   }
   function extLink(href, text, cls) {
     return el('a', { cls: cls, text: text, attrs: { href: href, target: '_blank', rel: 'noopener noreferrer' } });
@@ -73,6 +71,23 @@
     ul.appendChild(li);
   }
 
+  function renderSkills(p) {
+    var list = $('skills-list');
+    clear(list);
+    var skills = Array.isArray(p.skills) ? p.skills : [];
+    if (!skills.length) {
+      var empty = el('li', { cls: 'placeholder', text: '[PLACEHOLDER: add skills in portfolio.json]' });
+      list.appendChild(empty);
+      return;
+    }
+    skills.forEach(function (skill) {
+      var value = str(skill);
+      var item = el('li', { text: value || '[PLACEHOLDER]' });
+      if (!value || isPlaceholder(value)) item.className = 'placeholder';
+      list.appendChild(item);
+    });
+  }
+
   function renderAbout(p) {
     document.title = (str(p.name) || 'Portfolio') + ' | Portfolio';
     $('brand').textContent = str(p.name) || 'Portfolio';
@@ -82,6 +97,7 @@
     (Array.isArray(p.intro) ? p.intro : []).forEach(function (t) { intro.appendChild(el('p', { text: str(t) })); });
     var ch = $('interests'); clear(ch);
     (Array.isArray(p.interests) ? p.interests : []).forEach(function (i) { ch.appendChild(el('li', { text: str(i) })); });
+    renderSkills(p);
 
     var slot = $('photo-slot'); clear(slot);
     var photo = safePath(p.photo);
